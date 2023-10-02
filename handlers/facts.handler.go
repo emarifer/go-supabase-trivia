@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/emarifer/go-docker-trivia/database"
 	"github.com/emarifer/go-docker-trivia/models"
@@ -13,6 +14,8 @@ import (
 	return c.SendString("Hello, Enrique from Go Trivia App!!")
 } */
 
+var year = time.Now().Year()
+
 func ListFact(c *fiber.Ctx) error {
 	facts := []models.Fact{}
 	database.DB.Sp.DB.From("facts").Select("*").Execute(&facts)
@@ -23,6 +26,7 @@ func ListFact(c *fiber.Ctx) error {
 		"Title":     "Gopher Trivia Time",
 		"Subtitle":  "Facts for funtimes with friends!",
 		"Facts":     facts,
+		"Year":      year,
 	})
 }
 
@@ -31,6 +35,7 @@ func NewFactView(c *fiber.Ctx) error {
 		"PageTitle": "Create New Fact",
 		"Title":     "New Fact",
 		"Subtitle":  "Add a cool fact!",
+		"Year":      year,
 	})
 }
 
@@ -71,6 +76,7 @@ func ShowFact(c *fiber.Ctx) error {
 		"PageTitle": fmt.Sprintf("Show Fact #%s", id),
 		"Title":     "Single Fact",
 		"Fact":      fact,
+		"Year":      year,
 	})
 }
 
@@ -88,6 +94,7 @@ func EditFact(c *fiber.Ctx) error {
 		"Title":     "Edit Fact",
 		"Subtitle":  fmt.Sprintf("Edit your interesting fact #%s", id),
 		"Fact":      fact,
+		"Year":      year,
 	})
 }
 
