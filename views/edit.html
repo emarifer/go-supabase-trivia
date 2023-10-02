@@ -1,0 +1,15 @@
+<div class="container">
+    <form id="form-update-fact" data-factid="{{ .Fact.ID}}">
+        <label for="question">
+            <span>Question</span>
+            <input id="question" type="text" name="question" value="{{ .Fact.Question}}" required autofocus>
+        </label>
+
+        <label for="answer">
+            <span>Answer</span>
+            <input id="answer" type="text" name="answer" value="{{ .Fact.Answer}}" required>
+        </label>
+
+        <input type="submit" value="Update">
+    </form>
+</div>

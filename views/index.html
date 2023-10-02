@@ -1,0 +1,31 @@
+<div class="container">
+    {{ if .Facts }}
+    {{ range .Facts }}
+    <a href="/fact/{{ .ID }}">
+        <div class="fact-item">
+            <div class="question-wrapper">
+                <p class="question">{{ .Question }}</p>
+                <!-- <button id="answer-toggle" class="answer-toggle">
+                    Toggle answer
+                </button> -->
+                <div class="actions">
+                    {{ template "icon-arrow-right" .}}
+                </div>
+            </div>
+            <div class="answer-wrapper">
+                <p class="answer">{{.Answer}}</p>
+            </div>
+        </div>
+    </a>
+    {{ end }}
+    {{ else }}
+    <div class="no-facts">
+        <p>No facts yet.</p>
+        <p><a href="/fact">Add now</a></p>
+    </div>
+    {{ end }}
+</div>
+
+{{ template "button-up" .}}
+
+<!-- <script src="/js/app.js"></script> -->

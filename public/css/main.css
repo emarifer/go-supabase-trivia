@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Play&display=swap');
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+    background: -webkit-linear-gradient(315deg, hsla(64, 41%, 92%, 1) 0%, hsla(196, 83%, 84%, 1) 50%, hsla(305, 75%, 83%, 1) 100%);
+}
+
+button {
+    background: none;
+    text-decoration: inherit;
+    font-family: system-ui;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(75, 83, 102);
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(75, 83, 102);
+    text-align: center;
+}
+
+strong {
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form label span {
+    display: block;
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+form input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+
+form input[type="submit"] {
+    background: rgb(15, 23, 42);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 2rem;
+    cursor: pointer;
+}
+
+/* General */
+.title {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.title img {
+    transform: translateY(-10%);
+}
+
+.content {
+    max-width: 75%;
+}
+
+.content p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+    color: #555555;
+    border: 1px solid rgba(15, 23, 42, .1);
+}
+
+.btn:hover {
+    background-color: rgba(252, 252, 252, 1);
+
+}
+
+.btn-secondary {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(75, 83, 102);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+    color: white;
+    border: 1px solid rgba(15, 23, 42, .1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(75, 83, 102, 0.8);
+
+}
+
+.btn-danger {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(255, 23, 68);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+    color: white;
+    border: 1px solid rgba(15, 23, 42, .1);
+}
+
+.btn-danger:hover {
+    background-color: rgba(255, 23, 68, 0.8);
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Site Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 80px 20px 80px;
+    margin-bottom: 80px;
+}
+
+.site-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-logo img {
+    width: 80px;
+}
+
+.fact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    color: #555555;
+    background-color: rgb(199, 223, 245);
+    border-radius: 10px;
+}
+
+.fact-item .question-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fact-item .answer-toggle {
+    flex-basis: 10%;
+    align-self: flex-start;
+    background-color: #f4e6f3;
+    border: 1px solid #f4b3ef;
+    padding: 5px 10px;
+    color: #bd65b6;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fact-item .question {
+    margin-bottom: 10px;
+}
+
+.fact-item .answer {
+    color: #bd65b6;
+    font-style: italic;
+}
+
+.fact-item .fibre-content {
+    font-style: italic;
+}
+
+.no-facts,
+.add-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+}
+
+/* Button Up */
+#buttonUp {
+    background-color: #0284c7;
+    border: none;
+    border-radius: 9999px;
+    padding: 8px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+/* Media Querys */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: .75rem;
+    }
+
+    .title {
+        gap: 1rem;
+    }
+
+    .title h1 {
+        font-size: 1.4rem;
+    }
+
+    .title img {
+        transform: translateY(-30%);
+    }
+
+    .site-header {
+        padding: 30px 30px 10px 30px;
+        align-items: start;
+    }
+
+    .site-logo img {
+        width: 50px;
+    }
+
+    .btn {
+        font-size: 10px;
+    }
+
+
+    .container {
+        max-width: 700px;
+        width: 90%;
+        padding: 20px 20px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    .actions .btn-secondary {
+        font-size: 10px;
+    }
+
+    .actions .btn-danger {
+        font-size: 10px;
+    }
+}

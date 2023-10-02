@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="app to play trivia">
+    <link rel="shortcut icon" href="/img/gopher-svgrepo-com.svg" type="image/svg+xml">
+    <meta name="google" content="notranslate" />
+    <title>{{ .PageTitle }}</title>
+    <link id="styles" rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        {{ template "header" .}}
+
+        <div class="title">
+            <h1>{{ .Title }}</h1>
+            <img width="60" src="/img/gopher-svgrepo-com.svg" alt="App logo">
+        </div>
+
+        <h3>{{ .Subtitle }}</h3>
+
+        {{ embed }}
+    </div>
+</body>
+
+</html>
+
+<script id="main" src="/js/app.js"></script>
+
+<!-- <script>
+    const timeStamp = Date.now();
+    const stylesheetLink = document.querySelector("link#styles");
+    const appScriptLink = document.querySelector("script#main");
+
+    stylesheetLink.href += `?t=${timeStamp}`;
+    appScriptLink.src += `?t=${timeStamp}`;
+</script> -->
+
+<!-- En Dev este script funciona haciendo que el browser recargue
+los ficheros estáticos, pero en Prod produciría un flasheo cuando
+el browser se ve obligado a hacer una request del css, p.ej. -->
